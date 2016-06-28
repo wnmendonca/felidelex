@@ -1,0 +1,11 @@
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Service\bin\Debug\ProjetoFidelidade.Service.dll
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Service\bin\Debug\ProjetoFidelidade.Service.pdb
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Service\bin\Debug\ProjetoFidelidade.Data.dll
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Service\bin\Debug\ProjetoFidelidade.Model.dll
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Service\bin\Debug\EntityFramework.dll
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Service\bin\Debug\ProjetoFidelidade.Data.pdb
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Service\bin\Debug\ProjetoFidelidade.Model.pdb
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Service\bin\Debug\EntityFramework.xml
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Service\obj\Debug\ProjetoFidelidade.Service.csprojResolveAssemblyReference.cache
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Service\obj\Debug\ProjetoFidelidade.Service.dll
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Service\obj\Debug\ProjetoFidelidade.Service.pdb
