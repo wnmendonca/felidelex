@@ -1,20 +1,25 @@
-﻿using ProjetoFidelidade.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using ProjetoFidelidade.Model;
+using ProjetoFidelidade.Service;
+using ProjetoFidelidade.WS.App_Start;
 using System.Web.Http;
 
 namespace ProjetoFidelidade.WS.Controllers
 {
+    [RequireAuth]
     public class ClienteController : ApiController
     {
-        public readonly IClienteService _clienteService;
+        private readonly IClienteService _clienteService;
 
-        public void teste()
+        public ClienteController(IClienteService clienteService)
         {
-            
+            _clienteService = clienteService;
+        }
+
+        [HttpGet]
+        [ActionName("ObterCliente")]
+        public Cliente ObterCliente(string z)
+        {
+            return _clienteService.GetClienteByCPF(z);
         }
     }
 }

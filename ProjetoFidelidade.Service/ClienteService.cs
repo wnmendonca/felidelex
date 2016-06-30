@@ -15,6 +15,7 @@ namespace ProjetoFidelidade.Service
         Cliente GetCliente(int id);
         void CreateCliente(Cliente cliente);
         void SaveCliente();
+        Cliente GetClienteByCPF(string cpf);
     }
 
     public class ClienteService : IClienteService
@@ -36,6 +37,11 @@ namespace ProjetoFidelidade.Service
         public Cliente GetCliente(int id)
         {
             return clienteRepository.GetById(id);
+        }
+
+        public Cliente GetClienteByCPF(string cpf)
+        {
+            return clienteRepository.GetClienteByCPF(cpf);
         }
 
         public IEnumerable<Cliente> GetClientes()
