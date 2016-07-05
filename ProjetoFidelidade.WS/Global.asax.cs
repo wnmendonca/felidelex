@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Autofac.Integration.WebApi;
+using ProjetoFidelidade.WS.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
