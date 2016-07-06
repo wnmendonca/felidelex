@@ -4,6 +4,5 @@ C:\Users\Rumenigue\Source\Repos\ProjetoFidelidade\ProjetoFidelidade.Model\obj\De
 C:\Users\Rumenigue\Source\Repos\ProjetoFidelidade\ProjetoFidelidade.Model\obj\Debug\ProjetoFidelidade.Model.pdb
 C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Model\bin\Debug\ProjetoFidelidade.Model.dll
 C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Model\bin\Debug\ProjetoFidelidade.Model.pdb
-C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Model\obj\Debug\ProjetoFidelidade.Model.csprojResolveAssemblyReference.cache
 C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Model\obj\Debug\ProjetoFidelidade.Model.dll
 C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.Model\obj\Debug\ProjetoFidelidade.Model.pdb
