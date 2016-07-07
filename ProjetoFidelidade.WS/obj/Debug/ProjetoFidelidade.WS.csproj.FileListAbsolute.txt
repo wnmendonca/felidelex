@@ -37,3 +37,7 @@ C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.WS\bin\Entity
 C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.WS\obj\Debug\ProjetoFidelidade.WS.csprojResolveAssemblyReference.cache
 C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.WS\obj\Debug\ProjetoFidelidade.WS.dll
 C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.WS\obj\Debug\ProjetoFidelidade.WS.pdb
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.WS\bin\Autofac.dll
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.WS\bin\Autofac.Integration.WebApi.dll
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.WS\bin\Autofac.xml
+C:\Users\Rumenigue\Documents\GitHub\C#\felidelex\ProjetoFidelidade.WS\bin\Autofac.Integration.WebApi.xml
