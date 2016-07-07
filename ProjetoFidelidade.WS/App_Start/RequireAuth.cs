@@ -5,7 +5,7 @@ using System.Configuration;
 using System.Net.Http;
 using System.Net;
 
-namespace ProjetoFidelidade.WS.App_Start
+namespace ProjetoFidelidade.WS
 {
     public class RequireAuth : ActionFilterAttribute
     {

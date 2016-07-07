@@ -13,6 +13,7 @@ namespace ProjetoFidelidade.WS
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            GlobalConfiguration.Configure(ExceptionsPolicyConfig.Register);
 
             var builder = new ContainerBuilder();
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());

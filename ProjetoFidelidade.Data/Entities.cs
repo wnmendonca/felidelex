@@ -6,7 +6,7 @@ namespace ProjetoFidelidade.Data
 {
     public class Entities : DbContext
     {
-        public Entities() : base("Entities") { }
+        public Entities() : base("dbConn") { }
 
         public DbSet<Cliente> Clientes { get; set; }
 

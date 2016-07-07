@@ -105,13 +105,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\ExceptionsPolicyConfig.cs" />
     <Compile Include="App_Start\RequireAuth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Filters\RegularToHttpExceptionFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DTO\ClienteSaidaDTO.cs" />
+    <Compile Include="Models\DTO\ClienteDTO.cs" />
+    <Compile Include="Models\DTO\ResultDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +133,10 @@
     <ProjectReference Include="..\ProjetoFidelidade.Data\ProjetoFidelidade.Data.csproj">
       <Project>{403603e9-e10b-4d77-89b3-6b3b79e1eb0e}</Project>
       <Name>ProjetoFidelidade.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoFidelidade.Infrastructure\ProjetoFidelidade.Infrastructure.csproj">
+      <Project>{0f1b09e2-08c6-435d-9295-a0606735af0c}</Project>
+      <Name>ProjetoFidelidade.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\ProjetoFidelidade.Model\ProjetoFidelidade.Model.csproj">
       <Project>{EDBB2092-3295-400D-A455-65C6A3B14D1F}</Project>

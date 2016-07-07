@@ -27,7 +27,7 @@ namespace ProjetoFidelidade.Data.Infrastructure
 
         protected RepositoryBase(IDbFactory dbFactory)
         {
-            DbFactory = DbFactory;
+            DbFactory = dbFactory;
             dbSet = DbContext.Set<T>();
         }
 
