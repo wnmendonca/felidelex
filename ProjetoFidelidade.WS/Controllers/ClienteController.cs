@@ -1,8 +1,10 @@
-﻿using ProjetoFidelidade.Infrastructure;
+﻿using AutoMapper;
+using ProjetoFidelidade.Infrastructure;
 using ProjetoFidelidade.Model;
 using ProjetoFidelidade.Service;
 using ProjetoFidelidade.WS;
 using ProjetoFidelidade.WS.Models.DTO;
+using ProjetoFidelidade.WS.Models.Factory;
 using System;
 using System.Web.Http;
 
@@ -43,6 +45,19 @@ namespace ProjetoFidelidade.WS.Controllers
                     Celular = retorno.Celular,
                     DataCadastro = retorno.DataCadastro
                 },
+                Message = "",
+                StatusCode = (int)StatusCodeEnum.Success
+            };
+        }
+
+        [HttpPost]
+        [ActionName("CriarCliente")]
+        public ResultDTO<ClienteDTO> CriarCliente(ClienteDTO entrada)
+        {
+            // TODO: Terminar esse recurso
+            return new ResultDTO<ClienteDTO>()
+            {
+                Result = new ClienteFactory().Convert(_clienteService.GetCliente(1)),
                 Message = "",
                 StatusCode = (int)StatusCodeEnum.Success
             };

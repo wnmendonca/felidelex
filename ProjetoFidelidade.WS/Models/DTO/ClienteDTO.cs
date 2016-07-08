@@ -1,16 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjetoFidelidade.WS.Models.DTO
 {
     public class ClienteDTO
     {
+        [Required]
         public string Nome { get; set; }
+        [Required]
         public string CPF { get; set; }
+        [Required]
         public string Email { get; set; }
+        [Required]
         public string DddCelular { get; set; }
+        [Required]
         public string Celular { get; set; }
         public Nullable<DateTime> DataCadastro { get; set; }
     }

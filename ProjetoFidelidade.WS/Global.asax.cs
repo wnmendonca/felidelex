@@ -3,6 +3,8 @@ using Autofac.Integration.WebApi;
 using ProjetoFidelidade.Data.Infrastructure;
 using ProjetoFidelidade.Data.Repositories;
 using ProjetoFidelidade.Service;
+using ProjetoFidelidade.WS.Filters;
+using ProjetoFidelidade.WS.Mappings;
 using System.Reflection;
 using System.Web.Http;
 
@@ -14,6 +16,8 @@ namespace ProjetoFidelidade.WS
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
             GlobalConfiguration.Configure(ExceptionsPolicyConfig.Register);
+            GlobalConfiguration.Configuration.Filters.Add(new ValidateModelFilter());
+            AutoMapperConfiguration.Configure();
 
             var builder = new ContainerBuilder();
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());

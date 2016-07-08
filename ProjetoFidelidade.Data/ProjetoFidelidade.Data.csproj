@@ -58,9 +58,9 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201607071417475_First.cs" />
-    <Compile Include="Migrations\201607071417475_First.Designer.cs">
-      <DependentUpon>201607071417475_First.cs</DependentUpon>
+    <Compile Include="Migrations\201607080255234_First.cs" />
+    <Compile Include="Migrations\201607080255234_First.Designer.cs">
+      <DependentUpon>201607080255234_First.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,8 +77,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201607071417475_First.resx">
-      <DependentUpon>201607071417475_First.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201607080255234_First.resx">
+      <DependentUpon>201607080255234_First.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

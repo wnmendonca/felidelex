@@ -11,11 +11,21 @@ namespace ProjetoFidelidade.Data.Configuration
             HasKey(t => t.Id);
 
             // Properties
-            Property(t => t.Nome).HasMaxLength(100);
-            Property(t => t.CPF).HasMaxLength(11);
-            Property(t => t.Email).HasMaxLength(100);
-            Property(t => t.DddCelular).HasMaxLength(2);
-            Property(t => t.Celular).HasMaxLength(9);
+            Property(t => t.Nome)
+                .HasMaxLength(100)
+                .IsRequired();
+            Property(t => t.CPF)
+                .HasMaxLength(11)
+                .IsRequired();
+            Property(t => t.Email)
+                .HasMaxLength(100)
+                .IsRequired();
+            Property(t => t.DddCelular)
+                .HasMaxLength(2)
+                .IsRequired();
+            Property(t => t.Celular)
+                .HasMaxLength(9)
+                .IsRequired();
 
             // Mappings
             ToTable("Cliente");
