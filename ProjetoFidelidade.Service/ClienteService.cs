@@ -1,11 +1,9 @@
 ﻿using ProjetoFidelidade.Data.Infrastructure;
 using ProjetoFidelidade.Data.Repositories;
+using ProjetoFidelidade.Infrastructure.Helpers;
 using ProjetoFidelidade.Model;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoFidelidade.Service
 {
@@ -31,7 +29,11 @@ namespace ProjetoFidelidade.Service
 
         public void CreateCliente(Cliente cliente)
         {
+            if (!ValidationHelper.ValidaCPF(cliente.CPF))
+                throw new ArgumentException("CPF inválido.");
+
             clienteRepository.Add(cliente);
+            this.SaveCliente();
         }
 
         public Cliente GetCliente(int id)
@@ -41,6 +43,9 @@ namespace ProjetoFidelidade.Service
 
         public Cliente GetClienteByCPF(string cpf)
         {
+            if (!ValidationHelper.ValidaCPF(cpf))
+                return null;
+
             return clienteRepository.GetClienteByCPF(cpf);
         }
 

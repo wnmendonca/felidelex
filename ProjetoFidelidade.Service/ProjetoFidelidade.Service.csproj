@@ -48,6 +48,10 @@
       <Project>{403603e9-e10b-4d77-89b3-6b3b79e1eb0e}</Project>
       <Name>ProjetoFidelidade.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ProjetoFidelidade.Infrastructure\ProjetoFidelidade.Infrastructure.csproj">
+      <Project>{5b91a88e-28d4-47d0-901e-c62d38fbcf17}</Project>
+      <Name>ProjetoFidelidade.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProjetoFidelidade.Model\ProjetoFidelidade.Model.csproj">
       <Project>{edbb2092-3295-400d-a455-65c6a3b14d1f}</Project>
       <Name>ProjetoFidelidade.Model</Name>

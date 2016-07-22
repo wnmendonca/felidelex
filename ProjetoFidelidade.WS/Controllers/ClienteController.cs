@@ -1,10 +1,7 @@
-﻿using AutoMapper;
-using ProjetoFidelidade.Infrastructure;
+﻿using ProjetoFidelidade.Infrastructure;
 using ProjetoFidelidade.Model;
 using ProjetoFidelidade.Service;
-using ProjetoFidelidade.WS;
 using ProjetoFidelidade.WS.Models.DTO;
-using ProjetoFidelidade.WS.Models.Factory;
 using System;
 using System.Web.Http;
 
@@ -30,7 +27,7 @@ namespace ProjetoFidelidade.WS.Controllers
                 return new ResultDTO<ClienteDTO>()
                 {
                     Result = null,
-                    Message = "CPF inexistente na base.",
+                    Message = "CPF inválido e/ou não cadastrado.",
                     StatusCode = (int)StatusCodeEnum.Error
                 };
 
@@ -38,6 +35,7 @@ namespace ProjetoFidelidade.WS.Controllers
             {
                 Result = new ClienteDTO()
                 {
+                    Id = retorno.Id,
                     Nome = retorno.Nome,
                     CPF = retorno.CPF,
                     Email = retorno.Email,
@@ -54,11 +52,50 @@ namespace ProjetoFidelidade.WS.Controllers
         [ActionName("CriarCliente")]
         public ResultDTO<ClienteDTO> CriarCliente(ClienteDTO entrada)
         {
-            // TODO: Terminar esse recurso
+            // verifica se ja existe cpf cadastrado
+            var retornoCadastrado = _clienteService.GetClienteByCPF(entrada.CPF);
+            if (retornoCadastrado != null)
+            {
+                return new ResultDTO<ClienteDTO>()
+                {
+                    Result = null,
+                    Message = "CPF já está cadastrado.",
+                    StatusCode = (int)StatusCodeEnum.Error
+                };
+            }
+
+            try
+            {
+                _clienteService.CreateCliente(new Cliente(entrada.Nome, entrada.CPF, entrada.Email, entrada.DddCelular, entrada.Celular, DateTime.Now));
+            }
+            catch (Exception e)
+            {
+                return new ResultDTO<ClienteDTO>()
+                {
+                    Result = null,
+                    Message = e.Message,
+                    StatusCode = (int)StatusCodeEnum.Error
+                };
+            }
+            
+
+            var clienteCadastrado = _clienteService.GetClienteByCPF(entrada.CPF);
+
+            var retorno = new ClienteDTO
+            {
+                Id = clienteCadastrado.Id,
+                Nome = clienteCadastrado.Nome,
+                CPF = clienteCadastrado.CPF,
+                Email = clienteCadastrado.Email,
+                DddCelular = clienteCadastrado.DddCelular,
+                Celular = clienteCadastrado.Celular,
+                DataCadastro = clienteCadastrado.DataCadastro
+            };
+
             return new ResultDTO<ClienteDTO>()
             {
-                Result = new ClienteFactory().Convert(_clienteService.GetCliente(1)),
-                Message = "",
+                Result = retorno,
+                Message = "Cadastro realizado com sucesso.",
                 StatusCode = (int)StatusCodeEnum.Success
             };
         }

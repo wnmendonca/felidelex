@@ -5,6 +5,7 @@ namespace ProjetoFidelidade.WS.Models.DTO
 {
     public class ClienteDTO
     {
+        public int Id { get; set; }
         [Required]
         public string Nome { get; set; }
         [Required]

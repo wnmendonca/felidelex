@@ -112,6 +112,7 @@
     <Compile Include="App_Start\ExceptionsPolicyConfig.cs" />
     <Compile Include="App_Start\RequireAuth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Filters\RegularToHttpExceptionFilter.cs" />
     <Compile Include="Filters\ValidateModelFilter.cs" />
