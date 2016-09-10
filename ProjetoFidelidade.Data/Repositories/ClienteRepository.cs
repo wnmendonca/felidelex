@@ -10,9 +10,9 @@ namespace ProjetoFidelidade.Data.Repositories
         public ClienteRepository(IDbFactory dbFactory)
             : base(dbFactory) { }
 
-        public Cliente GetClienteByCPF(string cpf)
+        public Cliente GetByCPF(string cpf)
         {
-            var cliente = this.DbContext.Clientes.Where(c => c.CPF == cpf).FirstOrDefault();
+            var cliente = this.DbContext.Cliente.Where(c => c.CPF == cpf).FirstOrDefault();
 
             return cliente;
         }
@@ -26,6 +26,6 @@ namespace ProjetoFidelidade.Data.Repositories
 
     public interface IClienteRepository : IRepository<Cliente>
     {
-        Cliente GetClienteByCPF(string cpf);
+        Cliente GetByCPF(string cpf);
     }
 }

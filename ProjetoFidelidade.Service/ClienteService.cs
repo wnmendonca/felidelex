@@ -12,8 +12,7 @@ namespace ProjetoFidelidade.Service
         IEnumerable<Cliente> GetClientes();
         Cliente GetCliente(int id);
         void CreateCliente(Cliente cliente);
-        void SaveCliente();
-        Cliente GetClienteByCPF(string cpf);
+        Cliente GetByCPF(string cpf);
     }
 
     public class ClienteService : IClienteService
@@ -41,12 +40,12 @@ namespace ProjetoFidelidade.Service
             return clienteRepository.GetById(id);
         }
 
-        public Cliente GetClienteByCPF(string cpf)
+        public Cliente GetByCPF(string cpf)
         {
             if (!ValidationHelper.ValidaCPF(cpf))
                 return null;
 
-            return clienteRepository.GetClienteByCPF(cpf);
+            return clienteRepository.GetByCPF(cpf);
         }
 
         public IEnumerable<Cliente> GetClientes()

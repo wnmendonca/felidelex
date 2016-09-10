@@ -21,7 +21,7 @@ namespace ProjetoFidelidade.WS.Controllers
         [ActionName("ObterClientePorCPF")]
         public ResultDTO<ClienteDTO> ObterClientePorCPF(string CPF)
         {
-            var retorno = _clienteService.GetClienteByCPF(CPF);
+            var retorno = _clienteService.GetByCPF(CPF);
 
             if (retorno == null)
                 return new ResultDTO<ClienteDTO>()
@@ -53,7 +53,7 @@ namespace ProjetoFidelidade.WS.Controllers
         public ResultDTO<ClienteDTO> CriarCliente(ClienteDTO entrada)
         {
             // verifica se ja existe cpf cadastrado
-            var retornoCadastrado = _clienteService.GetClienteByCPF(entrada.CPF);
+            var retornoCadastrado = _clienteService.GetByCPF(entrada.CPF);
             if (retornoCadastrado != null)
             {
                 return new ResultDTO<ClienteDTO>()
@@ -79,7 +79,7 @@ namespace ProjetoFidelidade.WS.Controllers
             }
             
 
-            var clienteCadastrado = _clienteService.GetClienteByCPF(entrada.CPF);
+            var clienteCadastrado = _clienteService.GetByCPF(entrada.CPF);
 
             var retorno = new ClienteDTO
             {

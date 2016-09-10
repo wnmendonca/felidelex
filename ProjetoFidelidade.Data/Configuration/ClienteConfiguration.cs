@@ -1,4 +1,6 @@
 ﻿using ProjetoFidelidade.Model;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Infrastructure.Annotations;
 using System.Data.Entity.ModelConfiguration;
 
 namespace ProjetoFidelidade.Data.Configuration
@@ -16,10 +18,12 @@ namespace ProjetoFidelidade.Data.Configuration
                 .IsRequired();
             Property(t => t.CPF)
                 .HasMaxLength(11)
-                .IsRequired();
+                .IsRequired()
+                .HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute("IX_Cliente_UniqueCPF") { IsUnique = true }));
             Property(t => t.Email)
                 .HasMaxLength(100)
-                .IsRequired();
+                .IsRequired()
+                .HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute("IX_Cliente_UniqueEmail") { IsUnique = true }));
             Property(t => t.DddCelular)
                 .HasMaxLength(2)
                 .IsRequired();
