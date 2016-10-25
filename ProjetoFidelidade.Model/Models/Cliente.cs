@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ProjetoFidelidade.Model
 {
-    public sealed class Cliente
+    public class Cliente
     {
         public Cliente() { }
 
@@ -26,5 +27,7 @@ namespace ProjetoFidelidade.Model
         public DateTime? DataCadastro { get; private set; }
         public DateTime DataInclusao { get; private set; }
         public DateTime? DataAlteracao { get; set; }
+
+        public virtual ICollection<ClienteEstabelecimento> ClienteEstabelecimento { get; set; }
     }
 }

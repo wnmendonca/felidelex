@@ -16,6 +16,10 @@ namespace ProjetoFidelidade.Data
         public DbSet<EstabelecimentoAparelho> EstabelecimentoAparelho { get; set; }
         public DbSet<RedeEstabelecimento> RedeEstabelecimento { get; set; }
         public DbSet<TipoEstabelecimento> TipoEstabelecimento { get; set; }
+        public DbSet<ClienteEstabelecimento> ClienteEstabelecimento { get; set; }
+        public DbSet<Extrato> Extrato { get; set; }
+        public DbSet<TipoTransacao> TipoTransacao { get; set; }
+        public DbSet<Transacao> Transacao { get; set; }
 
         public virtual void Commit()
         {
@@ -37,6 +41,10 @@ namespace ProjetoFidelidade.Data
             modelBuilder.Configurations.Add(new EstabelecimentoAparelhoConfiguration());
             modelBuilder.Configurations.Add(new RedeEstabelecimentoConfiguration());
             modelBuilder.Configurations.Add(new TipoEstabelecimentoConfiguration());
+            modelBuilder.Configurations.Add(new ClienteEstabelecimentoConfiguration());
+            modelBuilder.Configurations.Add(new ExtratoConfiguration());
+            modelBuilder.Configurations.Add(new TipoTransacaoConfiguration());
+            modelBuilder.Configurations.Add(new TransacaoConfiguration());
         }
     }
 }

@@ -31,5 +31,6 @@ namespace ProjetoFidelidade.Model
         public virtual TipoEstabelecimento TipoEstabelecimento { get; set; }
         public virtual ICollection<EstabelecimentoAparelho> EstabelecimentoAparelho { get; set; }
         public virtual ICollection<RedeEstabelecimento> RedeEstabelecimento { get; set; }
+        public virtual ICollection<ClienteEstabelecimento> ClienteEstabelecimento { get; set; }
     }
 }
